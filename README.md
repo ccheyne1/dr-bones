@@ -2,6 +2,8 @@
 
 An interactive Halloween party app where guests type requests and an AI model creates fun costumes, props and dance poses on the fly. An elastic, animated skeleton brings each change to life while dancing to music, with beat-synced lights and spooky background performers. Runs locally on Windows and is built for TVs and large displays.
 
+![Dr. Bones dancing under beat-synced Halloween lights, then changing into a disco cowboy with a pink feather boa.](docs/preview.gif)
+
 ## Features
 
 - Live AI interaction turns guest requests into costumes, props and poses while preserving unrelated scene choices.
