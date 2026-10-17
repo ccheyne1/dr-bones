@@ -1,0 +1,23 @@
+{
+  "version": 1, "hat": "witch", "outfit": "bones", "boa": true, "boaColor": "#ff65b5", "glasses": false,
+  "prop": "wand", "mood": "sassy", "dance": "dramatic", "intensity": 0.6, "accent": "#6cd9ff", "theme": "underwater",
+  "effects": ["fog", "bubbles", "stars"],
+  "layers": [
+    {"anchor":"head","shape":"star","x":0,"y":-51,"w":18,"h":18,"rotation":0,"color":"#ffd56a","pattern":"solid","behind":false},
+    {"anchor":"torso","shape":"triangle","x":0,"y":17,"w":40,"h":38,"rotation":0,"color":"#6375c3","pattern":"stripes","behind":true},
+    {"anchor":"handL","shape":"ellipse","x":0,"y":18,"w":21,"h":15,"rotation":0,"color":"#b18cff","pattern":"dots","behind":false}
+  ],
+  "elements": [
+    {"anchor":"stage","shape":"ellipse","x":-170,"y":-60,"w":64,"h":36,"rotation":0,"color":"#6b6098","pattern":"dots","behind":true},
+    {"anchor":"stage","shape":"rect","x":-191,"y":-25,"w":4,"h":40,"rotation":-10,"color":"#6b6098","pattern":"solid","behind":true},
+    {"anchor":"stage","shape":"rect","x":-171,"y":-21,"w":4,"h":48,"rotation":0,"color":"#6b6098","pattern":"solid","behind":true},
+    {"anchor":"stage","shape":"rect","x":-151,"y":-25,"w":4,"h":40,"rotation":10,"color":"#6b6098","pattern":"solid","behind":true},
+    {"anchor":"stage","shape":"star","x":160,"y":38,"w":60,"h":60,"rotation":15,"color":"#d886a8","pattern":"dots","behind":true}
+  ],
+  "choreography": {"beats": 6, "frames": [
+    {"beat":0,"joints":{"head":10,"armL":-12,"foreR":12}},
+    {"beat":2,"joints":{"head":-10,"armL":15,"foreR":-12}},
+    {"beat":4,"joints":{"head":5,"armL":-8,"foreR":10}}
+  ]},
+  "description": "A sea-witch cabaret: jellyfish shapes, a star-tipped hat, and a six-beat flourish. An abstract haunted reef."
+}

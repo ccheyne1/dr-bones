@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dr. Boner</title><link rel="stylesheet" href="/style.css"></head>
+<body class="party"><canvas id="stage" aria-label="An animated skeleton dancing on a Halloween stage"></canvas>
+<header class="controls"><a class="brand" href="/" aria-label="Dr. Boner home"><span class="brandmark">☠</span><span>Dr. <b>Boner</b></span></a><div class="top-actions"><button id="system-audio" title="Listen to laptop audio" aria-label="Listen to laptop audio">🔊</button><button id="start" title="Enable microphone" aria-label="Enable microphone">♪</button><button id="fullscreen" title="Party mode" aria-label="Party mode">⛶</button><a class="host-link" href="/host" target="_blank" rel="noopener" title="Host controls" aria-label="Host controls">⚙</a></div></header>
+<main class="dock controls">
+<p id="request-error" role="alert" hidden></p>
+<div id="request-progress" class="request-progress" role="status" aria-live="polite" hidden><span class="spinner" aria-hidden="true"></span><span id="progress-label">Creating your change…</span><span id="progress-time" aria-hidden="true">0s</span><button id="cancel-creation" type="button" title="Cancel this change" aria-label="Cancel this change">×</button></div>
+<span id="creation-mode" class="creation-mode">Local</span>
+<form id="request-form"><label class="sr-only" for="prompt">Change the skeleton</label><input id="prompt" maxlength="500" autocomplete="off" placeholder="Change the look or the moves…"><span id="request-light" aria-hidden="true"></span><button id="submit" class="primary" type="submit" title="Apply request" aria-label="Apply request">↗</button></form>
+<div class="quick-row"><div class="pickers">
+<details class="picker"><summary>Looks</summary><div class="picker-menu"><button data-look="cowboy">Cowboy</button><button data-look="witch">Witch</button><button data-look="vampire">Vampire</button><button data-look="disco">Disco</button></div></details>
+<details class="picker"><summary>Moves</summary><div class="picker-menu"><button data-dance="groove">Groove</button><button data-dance="moonwalk">Moonwalk</button><button data-dance="disco">Disco</button><button data-dance="robot">Robot</button><button data-dance="salsa">Salsa</button><button data-dance="rattle">Rattle</button><button data-dance="dramatic">Dramatic</button><button data-dance="floss">Floss</button><button data-dance="orangejustice">Orange Justice</button><button data-dance="takethel">Take the L</button><button data-dance="electroshuffle">Electro Shuffle</button></div></details>
+<details class="picker"><summary>Saved</summary><div id="saved" class="picker-menu saved" aria-label="Saved creations"></div></details></div>
+<div id="beat-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="quick-tools"><button id="surprise" title="Surprise me" aria-label="Surprise me">✦</button><button id="undo" title="Undo" aria-label="Undo">↶</button><button id="reset" title="Reset" aria-label="Reset">↺</button></div></div>
+<div class="sr-only"><span id="beat-label"></span><span id="bpm-label"></span><span id="scene-label"></span><span id="saved-count"></span><p id="status" role="status" aria-live="polite"></p></div>
+</main><script type="module" src="/app.js"></script></body></html>

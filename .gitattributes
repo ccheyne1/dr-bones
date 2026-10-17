@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.onnx binary
+*.wasm binary
+*.f32 binary
+*.f64 binary
+*.pcm binary
+*.features binary
+*.reference binary

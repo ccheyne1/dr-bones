@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {RoomAudio} from '../public/audio.js';import {BeatClock} from '../public/core.js';import {audioHarness} from './audio-harness.mjs';
+for(const outcome of ['audio','no-audio','denied'])test(`laptop playback capture: ${outcome}, explicit picker, audio-only processing and clean shutdown`,async()=>{
+  const h=audioHarness({kind:'system',outcome});try{const c=new BeatClock(),audio=new RoomAudio(c),pending=audio.startSystem();assert.equal(h.picked[0][0],'system','picker is called before yielding the click');assert.equal(h.picked[0][1].systemAudio,'include');assert.equal(h.picked[0][1].audio.suppressLocalAudioPlayback,false);await pending;
+    if(outcome==='audio'){assert.equal(audio.sourceKind,'system');assert.equal(h.videoTrack.enabled,false);assert.deepEqual(h.contexts[0].analysed.getTracks(),[h.audioTrack]);assert.equal(c.mode,'mic');h.feed({at:2,event:true});assert.equal(c.music,true);audio.update();assert.ok(h.workers[0].messages.some(m=>m.type==='gain'&&m.value===1));await audio.stop();assert.equal(h.audioTrack.stopped,1);assert.equal(h.videoTrack.stopped,1);assert.equal(h.workers[0].terminated,true);}
+    else{assert.equal(c.mode,'demo');assert.equal(audio.stream,null);assert.equal(h.workers.length,0);assert.match(audio.status,outcome==='denied'?/cancelled/:/No audio shared/);}
+  }finally{h.restore();}
+});

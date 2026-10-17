@@ -1,0 +1,17 @@
+node_modules/
+**/.local/
+.env
+.env.*
+!.env.example
+*.dpapi
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+*.tmp
+*.zip
+coverage/
+.DS_Store
+Thumbs.db
+desktop.ini
