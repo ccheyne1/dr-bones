@@ -13,7 +13,7 @@ An interactive Halloween party app where guests type requests and an AI model cr
 - Fullscreen party mode, quiet idle animation, adjustable dance speed and manual tempo controls.
 - Optional AI scene creation, with local controls and validated JSON import available without an AI connection.
 
-The automatic rotation includes adult-oriented comedy and burlesque-inspired animation.
+The automatic rotation includes comedic dance routines.
 
 ## Technology
 
